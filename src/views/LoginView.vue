@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-light d-flex flex-wrap">
     <form @submit.prevent="handleSubmit" class="d-flex flex-column p-5 gap-2">
       <label for="username"> Nom d'utilisateur </label>
       <input
@@ -17,7 +17,7 @@
         v-model="user.password"
         placeholder="password"
       />
-      <input type="submit" name="valider" id="valider" />
+      <input class="btn btn-primary text-light border-dark" type="submit" name="valider" id="valider" value="Se connecter" />
     </form>
   </div>
 </template>

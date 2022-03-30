@@ -1,15 +1,17 @@
 <template>
-  <div v-for="consult in consultStore.consultations" :key="consult['@id']">
-    <div class="card" style="width: 18rem">
-      <img src="..." class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">{{ consult.doctor_name }}</h5>
-        <p class="card-text">date : {{ consult.date }}</p>
-        <router-link
-          :to="{ name: 'show_consultation', params: { id: consult.id } }"
-        >
-          <button class="btn btn-primary">Voir LA consultation</button>
-        </router-link>
+  <div class="d-flex flex-wrap gap-5 justify-content-center overflow-scroll">
+    <div v-for="consult in consultStore.consultations" :key="consult['@id']">
+      <div class="card" style="width: 18rem">
+        <img src="https://place-hold.it/300" class="card-img-top" alt="https://place-hold.it/300" />
+        <div class="card-body">
+          <h5 class="card-title">{{ consult.doctor_name }}</h5>
+          <p class="card-text">date : {{ consult.date }}</p>
+          <router-link
+            :to="{ name: 'show_consultation', params: { id: consult.id } }"
+          >
+            <button class="btn btn-primary">Voir LA consultation</button>
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
